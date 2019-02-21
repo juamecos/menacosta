@@ -1,0 +1,132 @@
+*, 
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  font-size: 62.5%;
+  font-family:'Oswald', sans-serif;
+  line-height: 1.7;
+  color: #777;
+  height: 100vh;
+  width: 100vw;
+  
+}
+.page__header {
+  height: 95vh;
+  position: relative;
+  background: 
+  linear-gradient(
+    to left bottom,
+    #0e119b4d, 
+    #f7cd164d
+  ),
+  url("../img/gruas.jpg")
+  no-repeat
+  center
+  center/cover;
+  overflow: hidden;
+  background-color: blue;
+  padding: 1rem;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%)
+}
+.logo {
+  background-color: #00000031;
+  color: black;
+  font-style: oblique;
+  width: 10rem;
+  margin: 0.1rem;
+  padding: 0.1rem; 
+  text-align: center;
+}
+.logo__text {
+  font-size: 2.5rem;
+  font-family: 'Miss Fajardose', cursive;
+  font-weight: 700;
+}
+.page__text {
+  width: 35rem;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: black;
+  backface-visibility: hidden;
+
+}
+.page__slogan {
+  font-size: 4.5rem;
+  letter-spacing: .8rem; 
+  text-shadow: 2px 1px #e2e2e2;
+  animation-name: MoveInLeft;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+  80% {
+    transform: translateX(10px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+.page__slogan--sub {
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing: .67rem;
+  margin-top: 1rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: #e2e2e2;
+  text-shadow: 2px 1px #777;
+  animation-name: MoveInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px)
+  }
+  80% {
+    transform: translateX(-10px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+.page__contact {
+  position: absolute;
+  top: 75%;
+  left: 60%;
+}
+.heading__contact {
+  font-size: 1.2rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: black;
+}
+.anchor__mailto {
+  text-decoration: none;
+  color: #e2e2e2;
+}
+.page__caption {
+  position: absolute;
+  display: inline-block;
+  top: 90%;
+  left: 90%;
+  color: rgb(82, 33, 33);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
