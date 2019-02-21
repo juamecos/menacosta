@@ -9,6 +9,15 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Miss+Fajardose" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script>
+  document.body.classList.add('js-loading');
+
+  window.addEventListener("load", showPage);
+
+  function showPage() {
+    document.body.classList.remove('js-loading');
+  }
+  </script>
 </head>
 <body class="page">
   <header class="page__header">
@@ -23,6 +32,7 @@
       <h3 class="heading__contact">If you have any question send an email to <a class= "anchor__mailto" href="mailto:juanjose@menacosta.com">juanjose@menacosta.com</a></h3>
     </div>
     <figcaption class="page__caption">Photo by EJ Yao on Unsplash</figcaption>
-  </header>  
+  </header>
+
 </body>
 </html>
