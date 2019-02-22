@@ -9,22 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Miss+Fajardose" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script>
-  document.body.classList.add('js-loading');
-
-  window.addEventListener("load", showPage);
-
-  function showPage() {
-    document.body.classList.remove('js-loading');
-  }
-  </script>
+  
 </head>
-<body class="page">
+<body class="page" id="page">
   <header class="page__header">
     <div class="logo">
       <h3 class="logo__text">MenaCosta</h3>
     </div>
-    <div class="page__text">
+    <div class="page__text page__text--hidden">
       <h1 class="page__slogan">Coming soon</h1>
       <h3 class="page__slogan--sub">Under Construction</h3>
     </div>
@@ -33,6 +25,20 @@
     </div>
     <figcaption class="page__caption">Photo by EJ Yao on Unsplash</figcaption>
   </header>
+  <script>
+      document.body.classList.add('js-loading');
+     
+    
+      window.addEventListener("load", showPage);
+    
+      function showPage() {
+        document.body.classList.remove('js-loading');
+        setTimeout(showText, 5000);
+      }
+      function showText() {
+        document.querySelector(".page__text").classList.remove(".page__text--hidden");
+      }
+      </script>
 
 </body>
 </html>

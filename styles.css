@@ -28,7 +28,7 @@
     #0e119b4d, 
     #f7cd164d
   ),
-  url("../img/gruas.jpg")
+  url("../img/gruas.jpeg")
   no-repeat
   center
   center/cover;
@@ -58,15 +58,15 @@
   transform: translate(-50%, -60%);
   color: black;
   backface-visibility: hidden;
-
+}
+.page__text--hidden{
+  display: hidden;
 }
 .page__slogan {
   font-size: 4.5rem;
   letter-spacing: .8rem; 
   text-shadow: 2px 1px #e2e2e2;
-  animation-name: MoveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation: MoveInLeft 2.5s ease-out;
 }
 
 @keyframes MoveInLeft {
@@ -91,9 +91,7 @@
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: #e2e2e2;
   text-shadow: 2px 1px #777;
-  animation-name: MoveInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation: MoveInRight 2.5s ease-out;
 }
 @keyframes MoveInRight {
   0% {
