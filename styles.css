@@ -24,25 +24,50 @@ html {
 .page__header {
   width: 100%;
   position: relative;
-  background-image: url(/img/menacosta_hero1.svg);
+  background-image: url(../img/menacosta_hero1.svgz); 
   background-size: cover;
   height: 0;
   padding-bottom: calc(100% * 750/1356);  
+}
+
+.svg__bgd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
 }
 .svg__right {
   position: absolute;
   top:20%;
   right: 0;
+  height: 20vw;
+}
+.svg__left {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  height: 15vw;
+}
+.svg__bubbles {
+  position: absolute;
+  top: 72%;
+  left: 10%;
+  height: 10vw;
 }
 .nav__main {
   padding: 2rem 3rem 0 2rem;
-  height: 15vh;
+  height: 8vw;
+  z-index: 900;
 }
 .logo__container {
-  float: left;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index:1000;
 }
 .logo {
-  height: 11rem;
+  height: 9vw;
 }
 .logo:hover {
   transform: translate(5px, 5px) scale(1.2);
@@ -50,7 +75,7 @@ html {
 .nav__list--right {
   float: right;
 }
-.nav__list--right::after {
+.nav-list--right {
   content: "";
   display: table;
   clear: both;
@@ -63,13 +88,11 @@ html {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: 700;
   border-radius: 50px;
-  box-shadow: 1px 1px 5px #888;
-  
+  box-shadow: 1px 1px 5px rgb(136, 136, 136);
 }
 .nav__item:hover {
-  border-radius: 50px;
-  box-shadow: 1px 1px 10px #57a1e2;
-}
+  box-shadow: 2px 1px 15px #389a9996;
+} 
 .item__link {
   text-decoration: none;
   color: #888;
@@ -89,9 +112,13 @@ html {
   display: hidden;
 }
 .page__slogan {
+  font-family: 'Space Mono', monospace,Verdana, sans-serif;
+
+  font-weight: 900;
   font-size: 8rem;
-  letter-spacing: 1rem; 
-  text-shadow: 2px 1px 5px #e2e2e2;
+  color:#7b36d6;
+  letter-spacing: -0.1rem; 
+  text-shadow: 2px 2px 10px #e2e2e2;
   animation: MoveInLeft 2.5s ease-out;
 }
 
@@ -156,35 +183,15 @@ html {
     opacity: 1;
   }
 }
-
-.page__contact {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-}
-.heading__contact {
-  font-size: 2rem;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  color: #555;
-}
-.anchor__mailto {
-  text-decoration: none;
-  color: #e2e2e2;
-}
 .section__space--white {
-  height: 10rem;
-  background-color: white;
+  height: 0;
+  background-color: #e2dfdf;
 }
-.section__space--blue {
-  height: 10rem;
-  background-color: blue;
-}
+
 .about__me {
   height: 60rem;
   text-align: center;
 }
-
 .section__container {
   height: 100%;
   width: 90%;
@@ -205,20 +212,34 @@ html {
   clear: both;
 }
 .heading__section {
-  margin: 2rem auto;
-  font-size: 5rem;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 6rem;
+  font-weight: 700;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: italic;
+  color: transparent;
+}
+.heading__section:hover::before {
+  transform: scale(1.1) skew(-5deg);
+}
+.heading__section::before {
+  content: "Who I am.";
+  position: absolute;
+  background-image: linear-gradient(270deg,#77d7f1, #276ac9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200%;
+  -webkit-text-fill-color: transparent;
 }
 .subsection {
   margin-bottom: 5rem;
 }
-.subsection::after {
+.clear__fix::after {
   content: "";
   display: table;
   clear: both;
 }
-
 .one__of__tree--left {
   float: left;
   width: 30%;
@@ -240,14 +261,36 @@ html {
   width: 60%;
   margin-right:4.5%;
 }
-
+.heading__column {
+  margin: 2rem auto;
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
 .section__image {
+  margin-top: 2rem;
   padding: 2.4rem;
   box-shadow: 1px 1px 10px #57a1e2;
   border-radius: 50%;
 }
 
-.heading__column {
-  font-size: 2rem;
-  padding-bottom: 1.5rem;
+.section__image:hover {
+  transform: scale(1.01) translate(2px);
 }
+.subsection__paragraph {
+  margin-top: 2.5rem;
+  text-align: justify;
+  font-size: 2rem;
+  color:#777;
+}
+.section__space--blue {
+  height: 20rem;
+
+  background: 
+  url(../img/bubbles.svg) 
+  no-repeat center center,
+  linear-gradient(270deg,#10c6f8, #276ac9);
+
+}
+
